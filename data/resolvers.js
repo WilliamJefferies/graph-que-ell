@@ -22,11 +22,8 @@ export const resolvers = {
 
       return new Promise((resolve, object) => {
         newFriend.save((err) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(newFriend);
-          }
+          if (err) reject(err);
+          else resolve(newFriend);
         });
       });
     },
@@ -37,13 +34,19 @@ export const resolvers = {
           input,
           { new: true },
           (err, friend) => {
-            if (err) {
-              reject(err);
-            } else {
-              resolve(friend);
-            }
+            if (err) reject(err);
+            else resolve(friend);
           }
         );
+      });
+    },
+    deleteFriend: (root, { id }) => {
+      return new Promise((resolve) => {
+        Friends.remove({ _id: input.id }),
+          (err) => {
+            if (err) reject(err);
+            else resolve("Successfully deleted friend");
+          };
       });
     },
   },
