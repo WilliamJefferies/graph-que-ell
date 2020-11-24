@@ -12,7 +12,7 @@ A graphql api using node, express, and mongodb for a micro social network of one
 
 This api uses graphi-ql and is available on port 8080 of localhost
 
-```localhost:8080/graphql?```
+```localhost:8080/api?```
 
 ## Project Structure
 ```

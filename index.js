@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(
-  "/graphql",
+  "/api",
   graphqlHTTP({
     schema: schema,
     graphiql: true,
@@ -17,5 +17,5 @@ app.use(
 );
 
 app.listen(8080, () => {
-  console.log("Running on server port localhost:8080/graphql");
+  console.log("Running on server port localhost:8080/api");
 });
