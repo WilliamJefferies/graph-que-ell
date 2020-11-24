@@ -8,7 +8,7 @@ A graphql api using node, express, and mongodb for a micro social network of one
 ##### Debug
 ```npm run debug```
 
-## Documentation
+##### Documentation
 
 This api uses graphi-ql and is available on port 8080 of localhost
 
